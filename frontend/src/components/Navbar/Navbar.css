@@ -1,0 +1,166 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* White background for a clean look */
+  color: #333333; /* Dark text for readability */
+  border-bottom: 1px solid #e0e0e0; /* Light gray border for subtle separation */
+}
+
+.navbar-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Menu Styles */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu-item {
+  text-decoration: none;
+  color: #555555; /* Darker gray for text */
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-menu-item.active,
+.navbar-menu-item:hover {
+  color: #007bff; /* Blue for active/hover state */
+  border-bottom: 2px solid #007bff;
+}
+
+/* Actions (Cart, Login/Profile) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-cart {
+  position: relative;
+}
+
+.navbar-cart img {
+  height: 35px; /* Smaller cart icon */
+}
+
+.navbar-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #007bff; /* Blue badge */
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  min-width: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Login Button */
+.navbar-login {
+  background: #007bff; /* Blue background */
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-login:hover {
+  background: #0056b3; /* Darker blue */
+}
+
+/* Profile Dropdown */
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile-icon {
+  height: 28px;
+  cursor: pointer;
+}
+
+.navbar-profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-profile-item {
+  background: none;
+  border: none;
+  color: #333333;
+  padding: 8px 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.navbar-profile-item:hover {
+  color: #007bff; /* Blue on hover */
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+  display: block;
+}
+
+/* Profile Dropdown Icons */
+.navbar-profile-icon-small {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+  .navbar-logo span {
+    font-size: 20px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-logo span {
+    font-size: 18px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}

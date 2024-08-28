@@ -6,11 +6,11 @@ import { StoreContext } from "../../Context/StoreContext";
 const FoodItem = ({ image, name, price, desc, id }) => {
   const { cartItems, addToCart, removeFromCart, url, currency } =
     useContext(StoreContext);
-  const [quantity, setQuantity] = useState(cartItems[id] || 0);
+  const [quantity, setQuantity] = useState(cartItems?.[id] || 0);
   const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
-    setQuantity(cartItems[id] || 0);
+    setQuantity(cartItems?.[id] || 0);
   }, [cartItems, id]);
 
   const handleShowMore = () => setShowMore(!showMore);

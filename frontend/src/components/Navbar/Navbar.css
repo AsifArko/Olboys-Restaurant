@@ -1,58 +1,21 @@
-/* General Navbar Styles */
 .navbar {
   display: flex;
+  flex: 4;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #ffffff; /* White background for a clean look */
-  color: #333333; /* Dark text for readability */
-  border-bottom: 1px solid #e0e0e0; /* Light gray border for subtle separation */
-}
-
-.navbar-logo span {
-  font-size: 24px;
-  font-weight: bold;
+  background-color: #ffffff;
   color: #333333;
-  text-decoration: none;
-  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-/* Menu Styles */
-.navbar-menu {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-menu-item {
-  text-decoration: none;
-  color: #555555; /* Darker gray for text */
-  font-size: 16px;
-  font-weight: 500;
-  padding-bottom: 6px;
-  transition: color 0.3s, border-bottom 0.3s;
-}
-
-.navbar-menu-item.active,
-.navbar-menu-item:hover {
-  color: #007bff; /* Blue for active/hover state */
-  border-bottom: 2px solid #007bff;
-}
-
-/* Actions (Cart, Login/Profile) */
+.navbar-logo,
 .navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar-cart {
-  position: relative;
+  flex: 0 0 auto; /* Keep original size */
 }
 
 .navbar-cart img {
+  padding-top: 0.1pc;
   height: 35px; /* Smaller cart icon */
 }
 
@@ -76,14 +39,49 @@
   color: #ffffff;
   border: none;
   padding: 8px 20px;
-  border-radius: 25px;
+  border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.navbar-login:hover {
-  background: #0056b3; /* Darker blue */
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  gap: 25px;
+  margin-right: 3pc;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navbar Search Bar */
+.navbar-search {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 8px 16px; /* Equal padding on left and right */
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.navbar-search input:focus {
+  border-color: #007bff;
 }
 
 /* Profile Dropdown */

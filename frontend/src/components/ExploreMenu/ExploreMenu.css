@@ -40,7 +40,7 @@
 }
 
 .explore-menu-list-item img.active {
-  border: 4px solid tomato;
+  border: 4px solid rgba(71, 99, 255, 0.885);
   padding: 2px;
 }
 

@@ -20,6 +20,9 @@ const Navbar = ({ setShowLogin }) => {
       <Link to="/" className="navbar-logo">
         <span>Ol' Boy's Soul Food</span>
       </Link>
+      <div className="navbar-search">
+        <input type="text" placeholder="search" />
+      </div>
       <ul className="navbar-menu">
         <li>
           <Link
@@ -51,7 +54,7 @@ const Navbar = ({ setShowLogin }) => {
               activeMenu === "contact" ? "active" : ""
             }`}
           >
-            Contact Us
+            Contact
           </a>
         </li>
       </ul>
